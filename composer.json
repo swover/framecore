@@ -1,0 +1,26 @@
+{
+  "name": "swover/framecore",
+  "description": "The core of swover-framework",
+  "keywords": ["swover","framework","framework"],
+  "homepage": "https://github.com/swover",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ruesin Liu",
+      "email": "ruesin@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-json" : "*",
+    "ext-pdo": "*",
+    "ruesin/mysql": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swover\\Framework\\":"./src"
+    },
+    "files": [
+      "./src/helpers.php"
+    ]
+  }
+}
