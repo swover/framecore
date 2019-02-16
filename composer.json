@@ -11,6 +11,7 @@
     }
   ],
   "require": {
+    "swover/swover": "^1.0",
     "ext-json" : "*",
     "ext-pdo": "*",
     "ruesin/mysql": "dev-master"
