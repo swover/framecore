@@ -33,7 +33,7 @@ if (!function_exists('env')) {
     try {
         $dotenv = \Dotenv\Dotenv::create(ROOT_DIR);
         $dotenv->overload();
-        $dotenv->required(['APP_NAME','SERVER_TYPE']);
+        $dotenv->required(['APP_NAME', 'SERVER_TYPE', 'ENTRANCE']);
     } catch (Dotenv\Exception\InvalidPathException $e) {
         die($e->getMessage());
     }
