@@ -12,9 +12,10 @@
   ],
   "require": {
     "swover/swover": "^1.0",
+    "vlucas/phpdotenv": "^3.3",
+    "ruesin/mysql": "dev-master",
     "ext-json" : "*",
-    "ext-pdo": "*",
-    "ruesin/mysql": "dev-master"
+    "ext-pdo": "*"
   },
   "autoload": {
     "psr-4": {
