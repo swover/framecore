@@ -33,7 +33,9 @@ if (!function_exists('env')) {
     try {
         $dotenv = \Dotenv\Dotenv::create(ROOT_DIR);
         $dotenv->overload();
-        $dotenv->required(['APP_NAME', 'SERVER_TYPE', 'ENTRANCE']);
+        $require = array_filter(explode(',', str_replace(' ', '', env('REQUIRE_ENV'))));
+        $require = array_unique(array_merge($require, ['APP_NAME', 'SERVER_TYPE', 'ENTRANCE']));
+        $dotenv->required($require);
     } catch (Dotenv\Exception\InvalidPathException $e) {
         die($e->getMessage());
     }
